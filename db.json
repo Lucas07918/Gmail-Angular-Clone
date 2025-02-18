@@ -1,0 +1,52 @@
+{
+  "emails": [
+    {
+      "id": "1",
+      "from": "john.doe@example.com",
+      "to": "you@example.com",
+      "subject": "Meeting Reminder",
+      "body": "Don't forget about our meeting tomorrow at 10 AM.",
+      "date": "2025-02-09T08:30:00Z",
+      "read": false,
+      "sent": false,
+      "favorited": false,
+      "deleted": false
+    },
+    {
+      "id": "2",
+      "from": "jane.smith@example.com",
+      "to": "you@example.com",
+      "subject": "Project Update",
+      "body": "The project is on track. I have attached the latest report.",
+      "date": "2025-02-08T15:45:00Z",
+      "read": true,
+      "sent": false,
+      "favorited": false,
+      "deleted": false
+    },
+    {
+      "id": "3",
+      "from": "news@newsletter.com",
+      "to": "you@example.com",
+      "subject": "Weekly Newsletter",
+      "body": "Here are the top stories of the week...",
+      "date": "2025-02-07T12:00:00Z",
+      "read": true,
+      "sent": false,
+      "favorited": false,
+      "deleted": false
+    },
+    {
+      "id": "4",
+      "from": "support@service.com",
+      "to": "you@example.com",
+      "subject": "Password Reset Request",
+      "body": "Click the link below to reset your password.",
+      "date": "2025-02-06T18:20:00Z",
+      "read": false,
+      "sent": false,
+      "favorited": false,
+      "deleted": false
+    }
+  ]
+}

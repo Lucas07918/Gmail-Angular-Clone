@@ -1,0 +1,21 @@
+<nav class="navbar">
+  <h1>Gmail Clone</h1>
+  <div class="input-component">
+    <input
+      type="text"
+      placeholder="Pesquisar emails..."
+      [(ngModel)]="searchTerm"
+      (input)="onSearch()"
+      (focus)="showResults = true"
+      (blur)="hideResults()"
+    />
+
+    <!-- Dropdown de sugestões -->
+    <ul class="search-results" *ngIf="showResults && filteredEmails.length > 0">
+      <li *ngFor="let email of filteredEmails" (click)="openEmail(email)">
+        {{ email.subject }}
+      </li>
+    </ul>
+  </div>
+</nav>
+

@@ -1,0 +1,47 @@
+<div class="email-detail">
+  <!-- Barra superior com a seta de voltar -->
+  <div class="email-header">
+    <div class="left-buttons">
+      <button (click)="goBack()">
+        <mat-icon aria-hidden="false" aria-label="Example home icon" fontIcon="keyboard_backspace"></mat-icon>
+        Voltar</button>
+      <button (click)="toggleFavorite(email.id)">
+        <mat-icon  class="favorite-icon">
+          {{ email.favorited ? 'star' : 'star_border' }}
+        </mat-icon>
+
+       </button>
+       <button (click)="deleteEmail(email.id)">
+          <mat-icon aria-hidden="false" aria-label="Example home icon" fontIcon="delete"></mat-icon>
+       </button>
+    </div>
+
+    <div class="email-nav">
+      <span>{{ currentIndex + 1 }} - {{ emails.length }}</span>
+
+      <button (click)="previousEmail()" [disabled]="currentIndex == 0">
+        <mat-icon class="favorite-icon" fontIcon="chevron_left" />
+
+      </button>
+
+      <button (click)="nextEmail()" [disabled]="currentIndex == emails.length - 1">
+        <mat-icon class="favorite-icon" fontIcon="chevron_right" />
+      </button>
+    </div>
+  </div>
+
+  <!-- Conteúdo do e-mail -->
+  <div class="email-content">
+    <h2>{{ email.subject }}</h2>
+    <div class="email-data-info">
+      <p><strong>De:</strong> {{ email.from }}</p>
+      <p><strong>Para:</strong> {{ email.to }}</p>
+      <p><strong>Data:</strong> {{ email.date | date:'fullDate' }}</p>
+    </div>
+    <hr>
+    <div class="email-content-body">
+      <p>{{ email.body }}</p>
+    </div>
+  </div>
+</div>
+

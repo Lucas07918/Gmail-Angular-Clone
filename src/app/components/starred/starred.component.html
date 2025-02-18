@@ -1,0 +1,16 @@
+<div class="email-list">
+  <div
+  class="email-item"
+  *ngFor="let email of starredEmails"
+  (click)="openStarredEmail(email.id)"
+  >
+  <span class="email-from">{{ email.from }}</span>
+  <span class="email-content">
+      <strong>{{ email.subject }}</strong> - {{ email.body | slice:0:50 }}...
+    </span>
+    <span class="email-date">{{ email.date | date:'shortTime' }}</span>
+  </div>
+</div>
+<h1 *ngIf="starredEmails.length == 0">Não há nenhum email nos favoritos</h1>
+
+

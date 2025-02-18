@@ -1,0 +1,15 @@
+<div class="compose-window">
+  <div class="header">
+    <span>Nova mensagem</span>
+    <button (click)="close()">✖</button>
+  </div>
+  <div class="inputs">
+    <input type="text" placeholder="Para" [(ngModel)]="to">
+    <hr>
+    <input type="text" placeholder="Assunto" [(ngModel)]="subject">
+    <hr>
+    <textarea placeholder="Escreva seu email..." [(ngModel)]="body"></textarea>
+
+    <button (click)="sendEmail()">Enviar</button>
+  </div>
+</div>

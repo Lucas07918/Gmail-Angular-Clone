@@ -1,0 +1,10 @@
+<aside class="sidebar">
+  <button class="compose" (click)="openCompose()">+ Compose</button>
+  <nav>
+    <a [routerLink]="''" class="active">Caixa de Entrada</a>
+    <a [routerLink]="'/starred'">Com Estrela</a>
+    <a [routerLink]="'/trash'" >Lixeira</a>
+    <a [routerLink]="'/sent'">Enviados</a>
+  </nav>
+</aside>
+<app-compose-email *ngIf="isComposing" (closeCompose)="isComposing = false"></app-compose-email>
